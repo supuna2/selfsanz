@@ -1,3 +1,5 @@
+//Tq udh make jgn lupa cantumkan author :'
+//jgn cuma makenya doang sc kiddie Lo
 
 //npm
 const qrcode = require("qrcode-terminal")
