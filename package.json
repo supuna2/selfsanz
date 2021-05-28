@@ -16,6 +16,7 @@
     "canvacord": "^5.2.0",
     "cfonts": "^2.9.0",
     "child_process": "^1.0.2",
+    "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "emoji-api": "^1.0.2",
     "fb-video-downloader": "^1.0.3",
