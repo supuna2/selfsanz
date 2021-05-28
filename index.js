@@ -151,6 +151,18 @@ sanz.on('CB:action,,call', async json => {
         sanz.sendMessage(callerId, "Auto block system, don't call please", MessageType.text)
         await sanz.blockUser(callerId, "add")
 })
+
+sanz.on('group-update', async(chat) => {
+  console.log(chat)
+  var from = chat.jid
+  var group = await sanz.groupMetadata(from)
+  if(!chat.desc == ''){
+  var tag = chat.descOwner.split('@')[0] + '@s.whatsapp.net'
+  var teks = `- [ Group Description Change ] -\n\nDeskripsi Group telah diubah oleh Admin @${chat.descOwner.split('@')[0]}\nDeskripsi Baru : ${chat.desc}`
+    sanz.sendMessage(group.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [tag]}})
+    console.log(`- [ Group Description Change ] - In ${group.subject}`)
+  }
+})
 	// Chat Update
 sanz.on('chat-update', async (mek) => {
 	try {
